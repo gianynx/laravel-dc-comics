@@ -13,7 +13,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comic::all();
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -22,7 +23,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -40,9 +41,10 @@ class ComicController extends Controller
      *
      * @param  \App\Models\Comic  $comic
      */
-    public function show(Comic $comic)
+    public function show($comic)
     {
-        //
+        $comic = Comic::findOrFail($comic);
+        return view('comics.show', compact('comic'));
     }
 
     /**
