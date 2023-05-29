@@ -7,7 +7,34 @@ $fa-font-path: "../fonts/webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import '~bootstrap/scss/bootstrap';
 
+// header
+header {
+    a.active {
+        border-bottom: 3px solid $active_color;
+    }
+}
+
+// jumbotron
+#jumbotron {
+    background-image: url('img/jumbotron.jpg');
+    height: 20rem;
+    background-size: cover;
+}
+
 // main
-.card_container {
-    width: 50rem;
+main {
+    .card_container {
+        height: 30rem;
+    }
+
+    img {
+        width: 100%;
+        height: 25rem;
+    }
+}
+
+// footer
+footer {
+    height: 15rem;
+    background-color: $dark_color;
 }

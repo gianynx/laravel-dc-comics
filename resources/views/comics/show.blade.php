@@ -8,7 +8,7 @@
     <section class="card_container mx-auto">
         <div class="row pt-5 pb-5">
             <div class="col-12 mt-4 mb-4">
-                <div class="card text-center">
+                <div class="card text-center mx-auto w-50">
                     <div class="card-body">
                         <div class="card-image">
                             <img class="img-fluid" src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">

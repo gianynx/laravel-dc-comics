@@ -9,14 +9,14 @@
         <div class="row pt-5 pb-5">
             @foreach ($comics as $comic)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-4 mb-4">
-                    <div class="card">
+                    <div class="card card_container">
                         <div class="card-body">
                             <div class="card-image">
                                 <a href="{{ route('comics.show', ['comic' => $comic]) }}">
-                                    <img class="img-fluid" src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                                    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
                                 </a>
                             </div>
-                            <div class="card-title text-uppercase fw-bold small pt-3">
+                            <div class="card-title text-uppercase fw-bold text-center pt-2">
                                 <a href="{{ route('comics.show', ['comic' => $comic]) }}" class="text-decoration-none">
                                     {{ $comic['series'] }}
                                 </a>
