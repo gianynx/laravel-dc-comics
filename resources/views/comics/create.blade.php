@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-    <section class="container">
-        <h1>Insert a new product</h1>
+    <section class="container pt-5 pb-5">
+        <h1 class="pb-4">Insert a new comic!</h1>
         <form action="{{ route('comics.store') }}" method="POST">
             @csrf
             <div class="mb-3">
@@ -52,8 +52,10 @@
                     required>
                 <div id="typeHelp" class="form-text">Insert a type!</div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="reset" class="btn btn-primary">Reset</button>
+            <div class="pt-4">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+            </div>
         </form>
     </section>
 @endsection

@@ -18,12 +18,8 @@
         @include('partials.header')
     </header>
     <main>
-        @include('partials.jumbotron')
         @yield('content')
     </main>
-    <footer>
-        @include('partials.footer')
-    </footer>
 </body>
 
 </html>

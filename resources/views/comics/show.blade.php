@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section class="card_container mx-auto">
+    <section class="card_container">
         <div class="row pt-5 pb-5">
             <div class="col-12 mt-4 mb-4">
                 <div class="card text-center mx-auto w-50">
