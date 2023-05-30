@@ -26,6 +26,13 @@
                     class="btn btn-primary rounded-0 text-white fw-bold text-uppercase px-5">
                     edit this comic
                 </a>
+                <div class="mt-3">
+                    <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="DELETE">
+                        <button type="submit" class="btn btn-danger rounded-0 text-white fw-bold text-uppercase px-5">
+                            delete this comic
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

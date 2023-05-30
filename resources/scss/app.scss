@@ -9,6 +9,7 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 body {
     font-family: 'Oswald', sans-serif;
+    background-color: $main_bg;
 }
 
 // header
@@ -38,6 +39,14 @@ main {
 
     .row {
         --bs-gutter-x: none;
+    }
+
+    .card {
+        cursor: pointer;
+
+        &:hover {
+            background-color: $card_hover;
+        }
     }
 }
 
