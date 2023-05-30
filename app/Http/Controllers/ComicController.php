@@ -29,7 +29,7 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      */
     public function store(Request $request)
     {
@@ -50,44 +50,41 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Comic  $comic
+     * @param  \App\Models\Comic $comic
      */
-    public function show($comic)
+    public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($comic);
         return view('comics.show', compact('comic'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Comic  $comic
+     * @param  \App\Models\Comic $comic
      */
-    public function edit($comic)
+    public function edit(Comic $comic)
     {
-        $comic = Comic::findOrFail($comic);
         return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Comic  $comic
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Models\Comic $comic
      */
-    public function update(Request $request, $comic)
+    public function update(Request $request, Comic $comic)
     {
         $form_data = $request->all();
         // dd($form_data);
-        $updatedComic = Comic::findOrFail($comic);
-        $updatedComic->update($form_data);
-        return redirect('comics.show', $updatedComic->id);
+        $comic->update($form_data);
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Comic  $comic
+     * @param  \App\Models\Comic $comic
      */
     public function destroy(Comic $comic)
     {
