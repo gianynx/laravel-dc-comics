@@ -63,9 +63,10 @@ class ComicController extends Controller
      *
      * @param  \App\Models\Comic  $comic
      */
-    public function edit(Comic $comic)
+    public function edit($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -76,7 +77,8 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $form_data = $request->all();
+        dd($form_data);
     }
 
     /**
