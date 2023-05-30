@@ -7,6 +7,10 @@ $fa-font-path: "../fonts/webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import '~bootstrap/scss/bootstrap';
 
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
 // header
 header {
     a.active {

@@ -14,12 +14,18 @@
                             <img class="img-fluid" src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
                         </div>
                         <div class="card-title text-center pt-3">
-                            <h1 class="text-uppercase">{{ $comic['series'] }}</h1>
+                            <h1 class="text-uppercase fw-bold">{{ $comic['series'] }}</h1>
                             <h3>{{ $comic['title'] }}</h3>
                             <p>{{ $comic['description'] }}</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="text-center py-3 mt-3">
+                <a href="{{ route('comics.edit', ['comic' => $comic]) }}"
+                    class="btn btn-primary rounded-0 text-white fw-bold text-uppercase px-5">
+                    edit this comic
+                </a>
             </div>
         </div>
     </section>

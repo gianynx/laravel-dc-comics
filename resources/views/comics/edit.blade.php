@@ -7,7 +7,7 @@
 @section('content')
     <section class="container pt-5 pb-5">
         <h1 class="pb-4">Edit this comic: {{ $comic['series'] }}</h1>
-        <form action="{{ route('comics.update', ['comic' => $id]) }}" method="POST">
+        <form action="{{ route('comics.update', ['comic' => $comic]) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">
@@ -19,7 +19,7 @@
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <div>
-                    <textarea name="description" id="description" cols="60" rows="10" placeholder="Insert a description!"
+                    <textarea name="description" id="description" cols="170" rows="7" placeholder="Insert a description!"
                         value="{{ $comic['description'] }}" required>
                     </textarea>
                 </div>

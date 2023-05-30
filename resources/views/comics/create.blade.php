@@ -17,7 +17,7 @@
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <div>
-                    <textarea name="description" id="description" cols="60" rows="10" placeholder="Insert a description!"
+                    <textarea name="description" id="description" cols="170" rows="7" placeholder="Insert a description!"
                         required>
                     </textarea>
                 </div>

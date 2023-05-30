@@ -14,17 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ComicController::class, 'index'])->name('comics.index');
+Route::get('/', [ComicController::class, 'index'])->name('home.index');
 
 Route::resource('comics', ComicController::class);
 
 Route::get('/characters', function () {
     return view('pages.characters');
 })->name('pages.characters');
-
-Route::get('/comics', function () {
-    return view('pages.comics');
-})->name('pages.comics');
 
 Route::get('/movies', function () {
     return view('pages.movies');
