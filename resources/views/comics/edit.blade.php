@@ -13,7 +13,7 @@
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"
-                    aria-describedby="titleHelp" value="{{ $comic['title'] }}">
+                    aria-describedby="titleHelp" value="{{ $comic['title'] }}" minlength="3" maxlength="200" required>
                 <div id="titleHelp" class="form-text">Insert a title!</div>
                 @error('title')
                     <div class="invalid-feedback">
@@ -25,14 +25,14 @@
                 <label for="description" class="form-label">Description</label>
                 <div>
                     <textarea name="description" id="description" cols="170" rows="7" placeholder="Insert a description!"
-                        value="{{ $comic['description'] }}">
+                        value="{{ $comic['description'] }}" minlength="3" required>
                     </textarea>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="thumb" class="form-label">Thumb URL</label>
                 <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb"
-                    id="thumb" aria-describedby="thumbHelp" value="{{ $comic['thumb'] }}">
+                    id="thumb" aria-describedby="thumbHelp" value="{{ $comic['thumb'] }}" required>
                 <div id="thumbHelp" class="form-text">Insert a thumb URL!</div>
                 @error('thumb')
                     <div class="invalid-feedback">
@@ -43,7 +43,7 @@
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
                 <input type="text" class="form-control @error('price') is-invalid @enderror" name="price"
-                    id="price" aria-describedby="priceHelp" value="{{ $comic['price'] }}">
+                    id="price" aria-describedby="priceHelp" value="{{ $comic['price'] }}" required>
                 <div id="priceHelp" class="form-text">Insert a price!</div>
                 @error('price')
                     <div class="invalid-feedback">
@@ -54,7 +54,8 @@
             <div class="mb-3">
                 <label for="series" class="form-label">Series</label>
                 <input type="text" class="form-control @error('series') is-invalid @enderror" name="series"
-                    id="series" aria-describedby="seriesHelp" value="{{ $comic['series'] }}">
+                    id="series" aria-describedby="seriesHelp" value="{{ $comic['series'] }}" minlength="3"
+                    maxlength="200" required>
                 <div id="seriesHelp" class="form-text">Insert a series!</div>
                 @error('series')
                     <div class="invalid-feedback">
@@ -71,7 +72,7 @@
             <div class="mb-3">
                 <label for="type" class="form-label">Type</label>
                 <input type="text" class="form-control @error('type') is-invalid @enderror" name="type" id="type"
-                    aria-describedby="typeHelp" value="{{ $comic['type'] }}">
+                    aria-describedby="typeHelp" value="{{ $comic['type'] }}" minlength="3" maxlength="200" required>
                 <div id="typeHelp" class="form-text">Insert a type!</div>
                 @error('type')
                     <div class="invalid-feedback">

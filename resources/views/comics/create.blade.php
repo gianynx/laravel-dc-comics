@@ -21,7 +21,7 @@
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"
-                    aria-describedby="title" value="{{ old('title') }}">
+                    aria-describedby="title" minlength="3" maxlength="200" required>
                 <div id="titleHelp" class="form-text">Insert a title!</div>
                 @error('title')
                     <div class="invalid-feedback">
@@ -33,14 +33,14 @@
                 <label for="description" class="form-label">Description</label>
                 <div>
                     <textarea name="description" id="description" cols="170" rows="7" placeholder="Insert a description!"
-                        value="{{ old('description') }}">
+                        minlength="3" required>
                     </textarea>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="thumb" class="form-label">Thumb URL</label>
                 <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb"
-                    id="thumb" aria-describedby="thumbHelp" value="{{ old('thumb') }}">
+                    id="thumb" aria-describedby="thumbHelp" required>
                 <div id="thumbHelp" class="form-text">Insert a thumb URL!</div>
                 @error('thumb')
                     <div class="invalid-feedback">
@@ -51,7 +51,7 @@
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
                 <input type="text" class="form-control @error('price') is-invalid @enderror" name="price"
-                    id="price" aria-describedby="priceHelp" value="{{ old('price') }}">
+                    id="price" aria-describedby="priceHelp" required>
                 <div id="priceHelp" class="form-text">Insert a price!</div>
                 @error('price')
                     <div class="invalid-feedback">
@@ -62,7 +62,7 @@
             <div class="mb-3">
                 <label for="series" class="form-label">Series</label>
                 <input type="text" class="form-control @error('series') is-invalid @enderror" name="series"
-                    id="series" aria-describedby="seriesHelp" value="{{ old('series') }}">
+                    id="series" aria-describedby="seriesHelp" minlength="3" maxlength="200" required>
                 <div id="seriesHelp" class="form-text">Insert a series!</div>
                 @error('series')
                     <div class="invalid-feedback">
@@ -73,13 +73,13 @@
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Sale date</label>
                 <input type="date" class="form-control" name="sale_date" id="sale_date" aria-describedby="sale_dateHelp"
-                    value="{{ old('sale_date') }}" required>
+                    required>
                 <div id="sale_dateHelp" class="form-text">Insert a sale date!</div>
             </div>
             <div class="mb-3">
                 <label for="type" class="form-label">Type</label>
                 <input type="text" class="form-control @error('type') is-invalid @enderror" name="type" id="type"
-                    aria-describedby="typeHelp" value="{{ old('type') }}">
+                    aria-describedby="typeHelp" minlength="3" maxlength="200" required>
                 <div id="typeHelp" class="form-text">Insert a type!</div>
                 @error('type')
                     <div class="invalid-feedback">
