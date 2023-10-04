@@ -34,7 +34,7 @@ class ComicController extends Controller
      *
      * @param  \Illuminate\Http\Request $request
      */
-    public function store(StoreComicRequest $request)
+    public function store(StoreComicRequest $request) // Sto utilizzando una richiesta HTTP per inviare dati al server. Sto utilizzando un oggetto di tipo StoreComicRequest per gestire i dati inviati.
     {
         // $request->validate([
         //     'title' => 'required|max:200|min:3',
@@ -45,8 +45,10 @@ class ComicController extends Controller
         //     'sale_date' => 'nullable|date',
         //     'type' => 'required|max:200|min:3'
         // ]);
-        // $form_data = $request->all();
+
         $form_data = $request->validated();
+
+        // $form_data = $request->all(); // $request->all() restituisce un array associativo contenente tutti i dati della richiesta.
         // $newComic = new Comic();
         // $newComic->title = $form_data['title'];
         // $newComic->description = $form_data['description'];
@@ -57,6 +59,7 @@ class ComicController extends Controller
         // $newComic->type = $form_data['type'];
         // $newComic->fill($form_data);
         // $newComic->save();
+
         $newComic = Comic::create($form_data);
         return redirect()->route('comics.show', $newComic->id);
     }
@@ -91,7 +94,9 @@ class ComicController extends Controller
     {
         // $form_data = $request->all();
         // dd($form_data);
+
         $form_data = $request->validated();
+
         $comic->update($form_data);
         return redirect()->route('comics.show', $comic->id);
     }
